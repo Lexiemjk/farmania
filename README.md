@@ -4,6 +4,7 @@
 
 I'm new in minecraft development, and it's my first project.
 I want to create this mod for two reason :
+
     - Improve my skills in java and forge dev
     - Create a complete and complex mod that I like.
 
@@ -16,3 +17,6 @@ if you have suggestion, tell me !
 
 ## Project Goals and Objectives :
 
+    - Create new aspects of food in Minecraft
+    - New way to improve your stats (buff, ...)
+    - ...
