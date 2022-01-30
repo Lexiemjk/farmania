@@ -1,5 +1,6 @@
 {
   "item.farmania.strange_seed": "Strange Seed",
   "block.farmania.magical_furnace" : "Magical furnace",
-  "itemGroup.farmania.farmania" : "Farmania"
+  "block.farmania.magical_wheat_crop" : "Magical Wheat",
+  "itemGroup.farmaniaGroup" : "Farmania"
 }

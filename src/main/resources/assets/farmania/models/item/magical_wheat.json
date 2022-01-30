@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0" : "farmania:item/strange_seed"
+    "layer0": "farmania:item/magical_wheat"
   }
 }
