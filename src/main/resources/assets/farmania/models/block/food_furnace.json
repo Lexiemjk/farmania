@@ -1,0 +1,6 @@
+{
+  "parent" : "block/cube_all",
+  "textures" : {
+    "all" : "farmania:block/food_furnace"
+  }
+}
