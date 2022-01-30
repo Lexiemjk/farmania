@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model" : "farmania:block/magical_furnace"
+    }
+  }
+}

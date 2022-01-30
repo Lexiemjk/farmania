@@ -1,5 +1,5 @@
 {
-  "item.farmania.diamond_apple": "Diamond Apple",
-  "item.farmania.diamond_seed": "Diamond Seed",
-  "block.farmania.food_furnace" : "Food Furnace"
+  "item.farmania.strange_seed": "Strange Seed",
+  "block.farmania.magical_furnace" : "Magical furnace",
+  "itemGroup.farmania.farmania" : "Farmania"
 }

@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,12 +19,21 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, FarmaniaMain.MODID);
 
-    public static final RegistryObject<Block> FOOD_FURNACE = createBlock("food_furnace", () -> new Block(AbstractBlock.Properties.of(Material.STONE).harvestLevel(1).harvestTool(ToolType.PICKAXE)));
-
-    public static RegistryObject<Block> createBlock(String name, Supplier<? extends Block> supplier){
-        RegistryObject<Block> block = BLOCKS.register(name, supplier);
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-        return block;
+    public static void register(IEventBus eventBus){
+        BLOCKS.register(eventBus);
     }
 
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().group(ModItemGroup.FARMANIA)));
+    }
+
+    public static final RegistryObject<Block> MAGICAL_FURNACE = registerBlock("magical_furnace",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(1).harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
 }

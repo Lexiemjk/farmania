@@ -1,5 +1,5 @@
 {
-  "item.farmania.diamond_apple": "Pomme de Diamant",
-  "item.farmania.diamond_seed": "Graine de Diamant",
-  "block.farmania.food_furnace": "Four de cuisine"
+  "item.farmania.strange_seed": "Graine étrange",
+  "block.farmania.magical_furnace" : "Four magique",
+  "itemGroup.farmania.farmania" : "Farmania"
 }
